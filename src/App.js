@@ -25,7 +25,7 @@ const loaded = () =>{
       <h2>{person.username}</h2>
       <img src ={person.avatar} alt={person.firstName}/>
       <p>{person.description}</p>
-      <p>{person.blog}</p>
+      <p>{person.blog[idx]}</p>
   
     </div>
   ))
