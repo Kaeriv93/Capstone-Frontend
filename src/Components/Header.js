@@ -1,10 +1,10 @@
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const Header = () =>{
     return(
         <>
             <nav className='navbar'>
-                Home
+                <Link to ='/'>Home</Link>
             </nav>
         </>
     )
