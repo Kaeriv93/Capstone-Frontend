@@ -10,6 +10,7 @@ function ProtectedPage() {
       try {
         const response = await api.get("/test/");
         setRes(response.data.response);
+        console.log(response)
       } catch {
         setRes("Something went wrong");
       }

@@ -25,12 +25,11 @@ export const AuthProvider = ({children}) => {
             body:JSON.stringify({'username':e.target.username.value, 'password':e.target.password.value})
         })
         let data = await response.json()
-
         if(response.status === 200){
             setAuthTokens(data)
             setUser(jwt_decode(data.access))
             localStorage.setItem('authTokens', JSON.stringify(data))
-            navigate('/user')
+            navigate(`/home`)
         }else{
             alert('Something went wrong!')
         }
@@ -41,7 +40,7 @@ export const AuthProvider = ({children}) => {
         setAuthTokens(null)
         setUser(null)
         localStorage.removeItem('authTokens')
-        navigate('/login')
+        navigate('/')
     }
 
 
