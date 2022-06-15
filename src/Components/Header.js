@@ -4,7 +4,10 @@ const Header = () =>{
     return(
         <>
             <nav className='navbar'>
-                <Link to ='/'>Home</Link>
+                <Link to ='/'>Login</Link>
+                <span> | </span>
+                <Link to ='/home'>Home</Link>
+                <span> | </span>
                 <Link to ='/register'>Register</Link>
 
             </nav>
