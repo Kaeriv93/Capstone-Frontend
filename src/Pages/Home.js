@@ -4,10 +4,11 @@ import UserInfo from '../Components/UserInfo'
 import AuthContext from "../context/AuthContext";
 
 const Home = () => {
-  let{username} = useParams()
+  
 
 
   const { user, logoutUser } = useContext(AuthContext);
+  console.log(user)
   return (
     <section>
       {user && <UserInfo user={user} />}
