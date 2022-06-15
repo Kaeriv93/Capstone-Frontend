@@ -3,17 +3,17 @@ import {useParams} from 'react-router-dom'
 import UserInfo from '../Components/UserInfo'
 import AuthContext from "../context/AuthContext";
 
-const Home = (props) => {
+const Home = () => {
   let{username} = useParams()
-  let thisusers = props.thisuser
-  let thisuser = thisusers.find(u => u._username === username)
+
 
   const { user, logoutUser } = useContext(AuthContext);
   return (
     <section>
       {user && <UserInfo user={user} />}
       <h1>You are on home page!</h1>
-      <h1>{thisuser.first_name} {thisuser.last_name}</h1>
+      <img src={user.avatar} alt={user.first_name}/>
+      <h1>{user.first_name} {user.last_name}</h1>
       <button onClick={logoutUser}>Logout</button>
     </section>
   );
