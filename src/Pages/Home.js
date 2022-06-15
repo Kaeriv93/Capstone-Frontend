@@ -13,6 +13,7 @@ const Home = () => {
     <section>
       {user && <UserInfo user={user} />}
       <h1>You are on home page!</h1>
+      <p>{user.date_of_birth}</p>
       <img src={user.avatar} alt={user.first_name}/>
       <h1>{user.first_name} {user.last_name}</h1>
       <button onClick={logoutUser}>Logout</button>
