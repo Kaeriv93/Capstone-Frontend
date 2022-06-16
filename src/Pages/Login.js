@@ -1,5 +1,6 @@
 // import {useNavigate} from 'react-router-dom'
 import AuthContext from '../context/AuthContext'
+import {toast, ToastContainer} from 'react-toastify'
 import { useContext } from 'react'
 
 
@@ -21,6 +22,7 @@ const Login = () =>{
                     </div>
                 </div>
             </form>
+            <ToastContainer toastStyle={{backgroundColor:"#0072b1", color:'white'}}/>
         </div>
     )
 }

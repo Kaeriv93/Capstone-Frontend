@@ -1,7 +1,9 @@
 
-   import { createContext, useState, useEffect } from 'react'
+import { createContext, useState, useEffect } from 'react'
 import jwt_decode from "jwt-decode";
 import { useNavigate} from 'react-router-dom'
+import {toast} from 'react-toastify'
+
 
 const AuthContext = createContext()
 
@@ -14,6 +16,8 @@ export const AuthProvider = ({children}) => {
     let [loading, setLoading] = useState(true)
 
     const navigate = useNavigate()
+
+
 
     let loginUser = async (e )=> {
         e.preventDefault()
@@ -29,9 +33,12 @@ export const AuthProvider = ({children}) => {
             setAuthTokens(data)
             setUser(jwt_decode(data.access))
             localStorage.setItem('authTokens', JSON.stringify(data))
-            navigate(`/home`)
+            navigate('/home')
         }else{
-            alert('Something went wrong!')
+            toast('Wrong username or password!',{
+                position:"bottom-right"
+               
+            })
         }
     }
 
@@ -83,13 +90,13 @@ export const AuthProvider = ({children}) => {
             updateToken()
         }
 
-        let fourMinutes = 1000 * 60 * 4
+        let oneHour = 1000 * 60 * 60
 
         let interval =  setInterval(()=> {
             if(authTokens){
                 updateToken()
             }
-        }, fourMinutes)
+        }, oneHour)
         return ()=> clearInterval(interval)
 
     }, [authTokens, loading])

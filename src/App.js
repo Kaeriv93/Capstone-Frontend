@@ -1,13 +1,12 @@
 import './App.css';
 import Main from './Components/Main';
-import Header from './Components/Header';
+import 'react-toastify/dist/ReactToastify.css'
 
 
 
 function App() {
   return(
     <div>
-      <Header/>
       <Main/>
     </div>
   )
