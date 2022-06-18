@@ -1,0 +1,32 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+.loginpage{
+    display: flex;
+    padding-top: 10vh;
+    height: 40vw;
+}
+
+.facenovel{
+    width: 50%;
+    line-height: 1.5;
+    margin-left: 20vh;
+}
+
+.facenovel h1{
+    font-size: 3rem;
+    text-align: left;
+    color: #0077b5;
+    font-weight: 700;
+}
+
+.facenovel p{
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.field{
+    width: 25vw;
+}
+
+.button{
+    width: 100%;
+}

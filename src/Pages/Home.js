@@ -3,7 +3,7 @@ import UserInfo from '../Components/UserInfo'
 import AuthContext from "../context/AuthContext";
 
 const Home = () => {
-  const { user, logoutUser, authTokens } = useContext(AuthContext);
+  const { user, logoutUser} = useContext(AuthContext);
   let [post, setPost] = useState([])
 
   useEffect(()=>{
@@ -15,27 +15,32 @@ const Home = () => {
       method:'GET',
       headers:{
         'Content-Type':'application/json',
-        'Authorization':'Bearer ' + String(authTokens.access)
       }
     })
     let data = await response.json()
     if(response.status ===200){
       setPost(data)
+      console.log(data)
     }else if(response.statusText ==='Unauthorized'){
       logoutUser()
     }
   }
-  console.log(user)
+
+  
+
   return (
     <section>
       {user && <UserInfo user={user} />}
       <h1>You are on home page!</h1>
       {/* <p>{user.date_of_birth}</p>
       <img src={user.avatar} alt={user.first_name}/> */}
-      <h1>{user.first_name} {user.last_name}</h1>
+      <h1>{user.firstname} {user.lastname}</h1>
       <ul>
         {post.map( posts =>(
-          <li key={posts.id}>{posts.body}</li>
+          <div key={posts.id}>
+            <p>{posts.body}</p>
+            {/* <img src={posts.image} alt={posts.image}/> */}
+          </div>
         ))}
       </ul>
       <button onClick={logoutUser}>Logout</button>

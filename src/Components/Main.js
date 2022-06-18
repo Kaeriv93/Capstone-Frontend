@@ -9,6 +9,7 @@ import Test from '../Pages/Test'
 import Register from '../Pages/Register'
 import Home from '../Pages/Home'
 import Header from "./Header"
+import Footer from "./Footer"
 
 
 const Main = ()=>{
@@ -28,6 +29,7 @@ const Main = ()=>{
                     <p>There's nothing here!</p>
                 </main>}/>
             </Routes>
+            <Footer/>
         </AuthProvider>
     )
 }
