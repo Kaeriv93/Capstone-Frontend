@@ -9,7 +9,7 @@ const Share = () =>{
                 <div className='top'>
                     <img src="https://i.imgur.com/ON62Y4U.jpg" alt="Me"/>
                     <form>
-                        <input id="postText" type="text" className='shareInput input' name="content"  placeholder="What's on your mind?" value='Nothing'/>
+                        <input id="postText" type="text" className='shareInput input' name="content"  placeholder="What's on your mind?" value="What's on your mind?"/>
                         <hr className='shareHr'/>
                         <div className="bottom">
                             <div className='shareOptions'>

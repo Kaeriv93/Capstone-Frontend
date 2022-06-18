@@ -26,12 +26,12 @@
 
 .shareInput{
     border: none;
-    right: 20px;
+    left: 2vw;
 
 }
 
 #postText{
-    width: 32vw;
+    width: 80%;
 }
 
 
