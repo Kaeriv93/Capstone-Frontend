@@ -1,3 +1,32 @@
 .header nav{
-    background-color: #F6F6F6;
+    background-color: #0077b5;
+    margin: 0 auto;
+}
+
+.navvv{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav a{
+    color: white;
+    margin-left: 15vw;
+}
+
+nav a:hover{
+    color: lightblue;
+}
+
+#log-out{
+    border: none;
+    background-color: #0077b5;
+    margin-left: 30vw;
+    height:25px;
+    color: white;
+
+}
+
+#log-out:hover{
+    color: lightblue;
 }

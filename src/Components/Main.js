@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react"
+// import { useEffect,useState } from "react"
 import {Routes, Route} from 'react-router-dom'
 import Login from "../Pages/Login"
 // import User from '../Pages/User'
@@ -8,19 +8,19 @@ import ProtectedPage from '../Pages/User'
 import Test from '../Pages/Test'
 import Register from '../Pages/Register'
 import Home from '../Pages/Home'
-import Header from "./Header"
 import Footer from "./Footer"
+import Userpage from "../Pages/Userpage"
 
 
 const Main = ()=>{
 
     return(
         <AuthProvider>
-            <Header/>
             <Routes>
                 <Route element ={<PrivateRoute/>}>
                     <Route path ='/home' element ={<Home/>}/>
                     <Route path='/test' element={<Test/>}/>
+                    <Route path= '/userpage' element={<Userpage/>}/>
                 </Route>
                 <Route path ='/register' element = {<Register/>}/>
                 <Route path ='/' exact element ={<Login/>}/>

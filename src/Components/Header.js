@@ -7,13 +7,12 @@ const Header = () =>{
     return(
         <div className='header'>
             <nav className='navbar'>
-                {user ? (<span><button onClick={logoutUser}>Logout</button>
-                <span> | </span>
+        {user ? <div className="navvv">
                 <Link to ='/home'>Home</Link>
-                <span> | </span>
-                <Link to ='/register'>Register</Link>
+                <Link to ='/userpage'>Profile</Link>
+                <button id ="log-out" className='button' onClick={logoutUser}>Logout</button>
                 
-                </span>):null}     
+                </div> :null}     
             </nav>
         </div>
     )
