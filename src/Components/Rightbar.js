@@ -1,4 +1,5 @@
 import './Styles/rightbar.css'
+import {FaBirthdayCake} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Rightbar = () =>{
@@ -24,7 +25,7 @@ const Rightbar = () =>{
         <div className='rightbar'>
             <div className='rightbarWrapper'>
                 <div className='birthdayContainer'>
-                    <span className='birthdayIcon'/>
+                    <FaBirthdayCake className='birthdayIcon'/>
                     <br/>
                     <span className="birthdayText"><b>Jesse Broxton</b> and <b>2 other friends</b> have a birthday today!</span>
                 </div>
