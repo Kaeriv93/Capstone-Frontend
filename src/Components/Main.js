@@ -9,6 +9,7 @@ import Test from '../Pages/Test'
 import Register from '../Pages/Register'
 import Home from '../Pages/Home'
 import Footer from "./Footer"
+import Userpage from "../Pages/Userpage"
 
 
 const Main = ()=>{
@@ -19,6 +20,7 @@ const Main = ()=>{
                 <Route element ={<PrivateRoute/>}>
                     <Route path ='/home' element ={<Home/>}/>
                     <Route path='/test' element={<Test/>}/>
+                    <Route path= '/userpage' element={<Userpage/>}/>
                 </Route>
                 <Route path ='/register' element = {<Register/>}/>
                 <Route path ='/' exact element ={<Login/>}/>
