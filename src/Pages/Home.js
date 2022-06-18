@@ -37,7 +37,10 @@ const Home = () => {
       <h1>{user.firstname} {user.lastname}</h1>
       <ul>
         {post.map( posts =>(
-          <li key={posts.id}>{posts.body}</li>
+          <div key={posts.id}>
+            <p>{posts.body}</p>
+            {/* <img src={posts.image} alt={posts.image}/> */}
+          </div>
         ))}
       </ul>
       <button onClick={logoutUser}>Logout</button>
