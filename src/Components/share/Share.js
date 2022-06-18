@@ -1,6 +1,6 @@
 import './share.css'
 import { FaPhotoVideo, FaSmile, FaMapMarkerAlt, FaTag } from "react-icons/fa";
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const Share = () =>{
     return(
