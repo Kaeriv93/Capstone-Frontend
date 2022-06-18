@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import UserInfo from '../Components/UserInfo'
 import AuthContext from "../context/AuthContext";
+import Header from '../Components/Header'
 
 const Home = () => {
   const { user, logoutUser} = useContext(AuthContext);
@@ -29,22 +30,25 @@ const Home = () => {
   
 
   return (
-    <section>
-      {user && <UserInfo user={user} />}
-      <h1>You are on home page!</h1>
-      {/* <p>{user.date_of_birth}</p>
-      <img src={user.avatar} alt={user.first_name}/> */}
-      <h1>{user.firstname} {user.lastname}</h1>
-      <ul>
-        {post.map( posts =>(
-          <div key={posts.id}>
-            <p>{posts.body}</p>
-            {/* <img src={posts.image} alt={posts.image}/> */}
-          </div>
-        ))}
-      </ul>
-      <button onClick={logoutUser}>Logout</button>
-    </section>
+    <>
+    <Header/>
+      <section>
+        {user && <UserInfo user={user} />}
+        <h1>You are on home page!</h1>
+        {/* <p>{user.date_of_birth}</p>
+        <img src={user.avatar} alt={user.first_name}/> */}
+        <h1>{user.firstname} {user.lastname}</h1>
+        <ul>
+          {post.map( posts =>(
+            <div key={posts.id}>
+              <p>{posts.body}</p>
+              {/* <img src={posts.image} alt={posts.image}/> */}
+            </div>
+          ))}
+        </ul>
+        <button onClick={logoutUser}>Logout</button>
+      </section>
+    </>
   );
 };
 
