@@ -13,7 +13,7 @@ const Rightbar = () =>{
                 <Link to={`/home`}>
                 <li className='rightBarFriend'>
                     <div className="rightbarImgContainer">
-                        <img className="rightbarProfileImg" src='nothing' alt='test'/>
+                        <img className="rightbarProfileImg" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiqm8sWP8zMOCAdImEeAkXfTyzZHnZfR_2aTtZzNTd-5KlabmeW1ml4i2wRiZBXy9EQPI&usqp=CAU' alt='test'/>
                     </div>
                     <span className="rightbarUsername"><span className="rightBarFirstName">First Name</span>Last Name</span>
                 </li>
