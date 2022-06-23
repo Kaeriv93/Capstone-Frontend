@@ -15,7 +15,7 @@ const Userpage = () =>{
         .then(result => setThisUser(result))
     }
 
-    // console.log(user.user_id)
+
    
     const loadedProfile = () =>{
         for(let i = 0; i < thisuser.length; i++){
@@ -25,6 +25,8 @@ const Userpage = () =>{
                 return(
                     <div>
                         <h1>{profileUser.firstName} {profileUser.lastName}</h1>
+                        <img src ={"http://127.0.0.1:8000" + profileUser.avatar} alt={profileUser.firstName}/>
+                        
                     </div>
                 )
             }
