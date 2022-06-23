@@ -36,7 +36,7 @@ const Input = () =>{
                 </div>
                 <div className="inputMiddle">
                     <span className='postText'>'Something goes here later'</span>
-                    <img className="postImg"src='nothing' alt="pic-published"/>
+                    {/* <img className="postImg"src='nothing' alt="pic-published"/> */}
                     <form  className={isActive ? "hidden-edit" : null}>
                         <input  className='input'value='nothing' name='content' type="text" placeholder='Edit Post!'/>
                         <input  className='input'value='Nothing' name='img' type="text" placeholder='Edit Img!'/>
