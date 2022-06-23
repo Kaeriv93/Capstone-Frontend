@@ -1,6 +1,4 @@
 import Header from "../Components/Header"
-import Sidebar from "../Components/Sidebar"
-import Rightbar from "../Components/Rightbar"
 import { useContext, useState, useEffect } from "react"
 import AuthContext from "../context/AuthContext"
 import './Styles/Userpage.css'
