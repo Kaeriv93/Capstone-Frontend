@@ -33,6 +33,11 @@
 .sidebarIcon{
     margin-right: 15px;
     font-size: 2vh;
+    color:#333333;
+}
+
+.sidebarListeItemText{
+    color: #333333;
 }
 
 
