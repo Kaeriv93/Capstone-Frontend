@@ -1,4 +1,5 @@
 import './Styles/sidebar.css'
+import { Link } from 'react-router-dom';
 import { FaRocketchat,FaPlayCircle,FaUserFriends,FaRegBookmark,FaSchool,FaRss,FaBriefcase, FaQuestionCircle } from 'react-icons/fa';
 
 const Sidebar = () =>{
@@ -7,8 +8,8 @@ const Sidebar = () =>{
         <div className='sidebar-wrapper'>
             <ul className ="sidebarList">
                 <li className='sidebarListItem'>
-                    <FaRss className='sidebarIcon'/>
-                    <span className="sidebarListeItemText">Feed</span>
+                    <Link to ='/home'><FaRss className='sidebarIcon'/>
+                    <span className="sidebarListeItemText">Feed</span></Link>
                 </li>
                 <li className='sidebarListItem'>
                     <FaPlayCircle className='sidebarIcon'/>
